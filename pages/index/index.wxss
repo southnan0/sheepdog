@@ -1,0 +1,38 @@
+/* pages/index/index.wxss */
+.page{
+  background-color: #f2f2f2;
+  background-image: url('http://ht-fc-h5.htmimi.com/static/img/bg.d5543bd.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height:100vh;
+  position: relative;
+}
+
+.fc-header{
+  position: absolute;
+  top:10%;
+  left:50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.fc-logo{
+  width:110px;
+  height:34px;
+}
+
+.fc-slogan{
+  font-size:12px;
+  color:#fff;
+  letter-spacing: 0.7px;
+}
+
+.index-main{
+  position: absolute;
+  width:88%;
+  margin-top:230px;
+  left:50%;
+  transform: translateX(-50%);
+  background-color:#fff; 
+  border-radius: 6px;
+}

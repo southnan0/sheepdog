@@ -1,0 +1,14 @@
+<!--pages/index/index.wxml-->
+
+<view class='page'>
+  <view class='fc-header'>
+    <image src='images/fc_logo.png' class="fc-logo"></image>
+    <text class='fc-slogan'>\n准备好开启缤纷旅行了么？</text>
+  </view>
+  <view class='index-main'>
+    <text>目的地\n</text>
+    
+    <text>入住离店日期\n</text>
+    <live-pusher url="https://domain/push_stream" mode="RTC" autopush bindstatechange="statechange" style="width: 300px; height: 225px;" />
+  </view>
+</view>
