@@ -1,0 +1,11 @@
+<!--component/form/input-number/index.wxml-->
+<view class="input-number input-number-size-{{ size }}">
+    <view class="input-number-minus {{ value <= min ? 'input-number-disabled' : '' }}"
+          data-disabled="{{ value <= min }}" bindtap="handleMinus">-
+    </view>
+    <input class="input-number-text {{ min >= max ? 'input-number-disabled' : '' }}" type="number" value="{{ value }}"
+           disabled="{{ min >= max }}" bindblur="handleBlur"/>
+    <view class="input-number-plus {{ value >= max ? 'input-number-disabled' : '' }}" data-disabled="{{ value >= max }}"
+          bindtap="handlePlus">+
+    </view>
+</view>

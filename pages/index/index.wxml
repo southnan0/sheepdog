@@ -1,6 +1,6 @@
 <!--pages/index/index.wxml-->
 
-<view class='page'>
+<view>
   <view class='fc-header'>
     <image src='images/fc_logo.png' class="fc-logo"></image>
     <text class='fc-slogan'>\n准备好开启缤纷旅行了么？</text>
@@ -18,4 +18,5 @@
       </picker>
     </view>
   </form>
+  <navigator url="/pages/project/detail" hover-class="navigator-hover">project/detail</navigator>
 </view>

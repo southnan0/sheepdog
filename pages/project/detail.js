@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/project/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    count:0
+
   },
 
   /**
@@ -62,8 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  handleChangeCount: function ({detail}){
-    this.setData({ count: detail.value})
   }
 })
