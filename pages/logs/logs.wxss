@@ -1,1 +1,9 @@
-/* pages/logs/logs.wxss */
+/*!
+ * sheepdog v1.0.0
+ * Copyright 2018 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.less {
+  color: red;
+  font-size: 12rpx;
+}
