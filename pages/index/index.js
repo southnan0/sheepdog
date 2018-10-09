@@ -1,11 +1,15 @@
 // pages/index/index.js
+const QQMapWX = require('../../utils/qqmap-wx-jssdk.min.js')
+let qqmapsdk;
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    count:0
+    count:0,
+    address:''
   },
 
   /**
@@ -19,7 +23,10 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    this.getLocation();
+    qqmapsdk = new QQMapWX({
+      key: 'I5ZBZ-OFVH2-N22UL-CYDDM-GFEVJ-M5B3K'
+    });
   },
 
   /**
@@ -65,5 +72,25 @@ Page({
   },
   handleChangeCount: function ({detail}){
     this.setData({ count: detail.value})
+  },
+  getLocation(){
+    const location = {};
+    wx.getLocation({
+      success:(res)=> {
+        location.latitude = res.latitude;
+        location.longitude = res.longitude;
+        qqmapsdk.reverseGeocoder({
+          location,
+          success:(response)=>{
+            if(response.status === 0){
+              this.setData({
+                address: response.result.address
+              })
+            }
+          }
+        })
+      
+      },
+    })
   }
 })
