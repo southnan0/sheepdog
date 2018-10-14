@@ -1,0 +1,26 @@
+/*!
+ * sheepdog v1.0.0
+ * Copyright 2018 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.button {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+  color: #FEBF12;
+  background-color: #fff;
+  border: 1px solid #FEBF12;
+  border-radius: 100rpx;
+}
+.button::after {
+  border: none;
+}
+.button-small {
+  font-size: 20rpx;
+  line-height: 2;
+}
+.button-middle {
+  font-size: 24rpx;
+  line-height: 2;
+}

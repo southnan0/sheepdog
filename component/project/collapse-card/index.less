@@ -1,0 +1,108 @@
+@import "styles/_base.less";
+
+.collapse-card{
+  color:@text-color;
+  font-size: 24rpx;
+  overflow: hidden;
+
+  &-header{
+    padding:30rpx;
+    padding-bottom:0;
+    background-color: @card-bg;
+    box-shadow: 0 7px 13px 0 rgba(181,181,181,0.30);
+
+    >view{
+      border-bottom:1px solid #EDEDED;
+      padding-bottom:30rpx;
+      >image{
+        display: block;
+        margin:auto;
+        width:690rpx;
+        height:360rpx;
+      }
+    }
+
+    &.active{
+      >view{
+        border-bottom:none;
+      }
+    }
+  }
+
+  &-title{
+    line-height: 40rpx;
+    margin-top:24rpx;
+    >text{
+      &:first-child{
+        font-size:28rpx;
+        color:@title-color;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-momey{
+    color:#FE6A6A;
+    font-size:32rpx;
+  }
+
+  &-description{
+    display: flex;
+    >text{
+      width:180rpx;
+      text-align: right;
+      &:first-child{
+        flex:1;
+        text-align: left;
+      }
+    }
+  }
+
+  &-member{
+    display: inline-block;
+    width:80rpx;
+    height:28rpx;
+    line-height: 28rpx;
+    font-size: 22rpx;
+    color: #FFFFFF;
+    background: #FFAE28;
+    border-radius: 4rpx;
+    text-align: center;
+  }
+
+  &-content{
+    padding:0 24rpx 24rpx;
+    &-item{
+      display: flex;
+      padding-top:24rpx;
+      padding-bottom:24rpx;
+      &:not(:last-child){
+        border-bottom:1px solid #e6e6e6;
+      }
+      >view{
+        width:230rpx;
+        text-align: right;
+        &:first-child{
+          flex: 1;
+          text-align: left;
+        }
+      }
+    }
+
+    @titleLineHeight:40rpx;
+    @titleLine:2;
+    &-title{
+      font-size:28rpx;
+      color:@title-color;
+      line-height: @titleLineHeight;
+      height:@titleLineHeight*2;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: normal;
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-line-clamp:@titleLine;
+    }
+  }
+}
+

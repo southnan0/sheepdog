@@ -1,0 +1,103 @@
+/*!
+ * sheepdog v1.0.0
+ * Copyright 2018 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.collapse-card {
+  color: #6B6A72;
+  font-size: 24rpx;
+  overflow: hidden;
+}
+.collapse-card-header {
+  padding: 30rpx;
+  padding-bottom: 0;
+  background-color: #fff;
+  box-shadow: 0 7px 13px 0 rgba(181, 181, 181, 0.3);
+}
+.collapse-card-header > view {
+  border-bottom: 1px solid #EDEDED;
+  padding-bottom: 30rpx;
+}
+.collapse-card-header > view > image {
+  display: block;
+  margin: auto;
+  width: 690rpx;
+  height: 360rpx;
+}
+.collapse-card-header.active > view {
+  border-bottom: none;
+}
+.collapse-card-title {
+  line-height: 40rpx;
+  margin-top: 24rpx;
+}
+.collapse-card-title > text:first-child {
+  font-size: 28rpx;
+  color: #222;
+  font-weight: bold;
+}
+.collapse-card-momey {
+  color: #FE6A6A;
+  font-size: 32rpx;
+}
+.collapse-card-description {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.collapse-card-description > text {
+  width: 180rpx;
+  text-align: right;
+}
+.collapse-card-description > text:first-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: left;
+}
+.collapse-card-member {
+  display: inline-block;
+  width: 80rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  font-size: 22rpx;
+  color: #FFFFFF;
+  background: #FFAE28;
+  border-radius: 4rpx;
+  text-align: center;
+}
+.collapse-card-content {
+  padding: 0 24rpx 24rpx;
+}
+.collapse-card-content-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 24rpx;
+  padding-bottom: 24rpx;
+}
+.collapse-card-content-item:not(:last-child) {
+  border-bottom: 1px solid #e6e6e6;
+}
+.collapse-card-content-item > view {
+  width: 230rpx;
+  text-align: right;
+}
+.collapse-card-content-item > view:first-child {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  text-align: left;
+}
+.collapse-card-content-title {
+  font-size: 28rpx;
+  color: #222;
+  line-height: 40rpx;
+  height: 80rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}

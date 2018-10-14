@@ -1,0 +1,44 @@
+/*!
+ * sheepdog v1.0.0
+ * Copyright 2018 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.collapse-panel {
+  padding: 10px 15px;
+}
+.collapse-panel-content {
+  overflow: hidden;
+  line-height: 40rpx;
+  font-size: 28rpx;
+}
+.collapse-panel-icon {
+  position: relative;
+}
+.collapse-panel-icon::after {
+  display: inline-block;
+  content: '';
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADNSURBVDhP7ZGtCgJBGEVHs+/gG5gVxCIoGgwGg8VqMYkYbBaLyWDwEXw6RUT8CZ7vm11cl3GZWZPggcPsnYULwzU/Qwkr9jOYWnS+McMDOn9mMMYHVjUlKOIOj1iXCw8meMeRJgcF3OIJG3KRwRSlbKgpAynd4BmbcuFgjjccaPpAepQ1Smlb04sFXrGvyeI9ygov2NVkzBKlrKfJEjxKXLJHKe9gTO5R5Jny/JYmy9ejlKNT8BolTcgo3viMEkzWKLlxjfI1yVH+JDHmCV+GNXFLzUj+AAAAAElFTkSuQmCC");
+  background-size: 100%;
+}
+.collapse-panel-active .collapse-panel-icon::after {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADYSURBVDhP3dExCwFhHMfxY5CkSClJyYtgkcGgvAFvwmg3WQwmg8X7UAaLDAaLQTJIZotEMvH9P1LXdee55267b33K/esu9bMiUQKd78/wJTHDG305hCmFOc7o4oUBAiUfW+CEihyojSeG6smgNJY4oiwHWy08MEJMDroyWOGAkhzIOUoTd4zx96NZrLFHUQ7kNUoDN0zg+tEcNtihIAfSjVLHFVPE5WCvhy3y6sn/KDVcUFVPtuRvyxiS6Si/91xzG8VZqFG8CjSKLqNR/OZrFNOCvheNLOsDdlw1bw9swYIAAAAASUVORK5CYII=");
+}
+.collapse-panel-line-1 {
+  height: 40rpx;
+}
+.collapse-panel-line-2 {
+  height: 80rpx;
+}
+.collapse-panel-line-3 {
+  height: 120rpx;
+}
+.collapse-panel-line-4 {
+  height: 160rpx;
+}

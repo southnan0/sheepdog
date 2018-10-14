@@ -1,0 +1,10 @@
+<!--component/panel/small-icon-panel/index.wxml-->
+<navigator url="{{url}}" class="weui-cell weui-cell_access" hover-class="{{url ? 'weui-cell_active':'none'}}">
+  <view class="weui-cell__hd {{iconPosition==='top'?'icon-top':''}}">
+    <image src="{{icon}}" style="width: 20px;height: 20px;margin-right: 5px" />
+  </view>
+  <view class="weui-cell__bd weui-cell_primary">
+      <slot></slot>
+  </view>
+  <view wx:if="{{url}}" class="weui-cell__ft weui-cell__ft_in-access"></view>
+</navigator>

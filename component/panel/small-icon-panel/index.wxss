@@ -1,0 +1,6 @@
+/* component/panel/small-icon-panel/index.wxss */
+@import '../../../styles/weui.wxss';
+
+.icon-top{
+  align-self: flex-start;
+}

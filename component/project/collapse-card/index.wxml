@@ -1,0 +1,36 @@
+<!--component/project/collapse-card/index.wxml-->
+<view class="{{classPrefix}}">
+    <view class="{{classPrefix}}-header {{active?'active':''}}" bindtap='handleCollapse'>
+        <view>
+            <image src="{{data.url}}"></image>
+
+            <view class="{{classPrefix}}-title {{classPrefix}}-description">
+                <text>{{data.title}}</text>
+                <text>
+                    <text class="{{classPrefix}}-momey">¥ {{data.type === 1?data.price1 : data.price2}}</text> 起
+                </text>
+            </view>
+
+            <view class="{{classPrefix}}-description">
+                <text>{{data.description}}</text>
+                <text>
+                    <text wx:if="data.type === 1" class="{{classPrefix}}-member">会员价</text>
+                </text>
+            </view>
+        </view>
+    </view>
+    <view class="{{classPrefix}}-content" style="{{active?'height:auto':'height:0;padding:0;overflow:hidden;'}}">
+        <view class="{{classPrefix}}-content-item" wx:for="{{data.children}}" wx:key="index">
+            <view>
+                <view class="{{classPrefix}}-content-title">{{item.title}}</view>
+                <text>详情></text>
+            </view>
+            <view>
+                <view>会员价<text class="{{classPrefix}}-momey">¥ {{data.type === 1?item.price1:item.price2}}</text></view>
+                <view wx:if="{{data.type === 1}}">¥ {{item.price2}}</view>
+                <view></view>
+            </view>
+        </view>
+    </view>
+</view>
+

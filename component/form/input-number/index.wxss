@@ -4,7 +4,7 @@
  * Licensed under the MIT license
  */
 .input-number {
-  color: #495060;
+  color: #6B6A72;
 }
 .input-number view {
   display: inline-block;

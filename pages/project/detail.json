@@ -1,1 +1,9 @@
-{}
+{
+  "usingComponents": {
+    "input-number": "/component/form/input-number/index",
+    "sh-button": "/component/button/index",
+    "small-icon-panel":"/component/panel/small-icon-panel/index",
+    "collapse-panel":"/component/panel/collapse-panel/index",
+    "collapse-card":"/component/project/collapse-card/index"
+  }
+}

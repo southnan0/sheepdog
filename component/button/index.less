@@ -1,0 +1,23 @@
+.button{
+  display: inline-block;
+  vertical-align: top;
+  padding-left:36rpx;
+  padding-right:36rpx;
+  color:#FEBF12;
+  background-color:#fff;
+  border:1px solid #FEBF12;
+  border-radius:100rpx;
+  &::after{ border: none; }
+
+  @smallSize:20rpx;
+  &-small{
+    font-size:@smallSize;
+    line-height: 2;
+  }
+
+  @middleSize:24rpx;
+  &-middle{
+    font-size: @middleSize;
+    line-height: 2;
+  }
+}

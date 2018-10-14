@@ -6,6 +6,7 @@ const postcss = require('gulp-postcss');
 const pkg = require('./package.json');
 const header = require('gulp-header');
 const autoprefixer = require('autoprefixer');
+const plumber = require('gulp-plumber');
 
 gulp.task('compile-less', () => {
     const banner = [
@@ -18,7 +19,8 @@ gulp.task('compile-less', () => {
   ].join('\n');
 
   return gulp.src(['pages/**/*.less', 'component/**/*.less'],{base:'.'})
-    .pipe(less())
+      .pipe(plumber())
+    .pipe(less().on('error',console.error.bind(console)))
     .pipe(postcss([autoprefixer(['iOS >= 8', 'Android >= 4.1'])]))
     // .pipe(cssmin())   // 对css进行压缩，可根据环境进行处理
     .pipe(header(banner, { pkg: pkg }))
@@ -32,4 +34,4 @@ gulp.task('watch',function(){
   gulp.watch(['pages/**/*.less', 'component/**/*.less'], ['compile-less']);
 });
 
-gulp.task('default', ['watch','compile-less']);
+gulp.task('default', ['watch']);

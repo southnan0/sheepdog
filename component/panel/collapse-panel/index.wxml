@@ -1,0 +1,10 @@
+<!--component/panel/collapse-panel/index.wxml-->
+<view class="{{classPrefix}} {{open?classPrefix+'-active':''}}" bindtap='handleCollapse'>
+  <view class="{{classPrefix}}-icon">
+    <slot name="title"></slot>
+  </view>
+
+  <view class="{{classPrefix}}-content {{open?'':classPrefix+'-line-'+line}}">
+    <slot></slot>
+  </view>
+</view>

@@ -1,7 +1,57 @@
 <!--pages/project/detail.wxml-->
-<view>
-  <input-number max='100' min='0' value='{{count}}'  bindchange="handleChangeCount"></input-number>  
-  <view>
-    <view>精选推荐</view>
-  </view>
+<view class="{{classPrefix}}">
+    <!--<input-number max='100' min='0' value='{{count}}'  bindchange="handleChangeCount"></input-number>-->
+    <view class="bg-white">
+        <image class="{{classPrefix}}-image" src="http://n.sinaimg.cn/finance/transform/20160407/h3nM-fxrcizu3728929.jpg"></image>
+        <view class="{{classPrefix}}-describe">
+            <view class="{{classPrefix}}-describe-content">
+                <text class="content-title">启东伊斯登酒店</text>
+                <view class="{{classPrefix}}-tag">
+                    <text>奢华别墅</text>
+                    <text>独栋</text>
+                </view>
+                <view class="{{classPrefix}}-paragraph">
+                    位于海陵岛恒大夏威夷，有山景、园景、海景、湖景等多重景观资源
+                </view>
+                <view>
+                    <sh-button>推荐给好友</sh-button>
+                    <sh-button style="margin-left:30rpx;">查看详情</sh-button>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='{{classPrefix}}-location border-top'>
+        <small-icon-panel url="http://www.baidu.com">
+            我是一个兵，来自老百姓，我是一个兵，来自老百姓，我是一个兵，来自老百姓，我是一个兵，来自老百姓
+        </small-icon-panel>
+    </view>
+
+    <view class='{{classPrefix}}-location border-top'>
+        <collapse-panel>
+            <view slot="title" class="{{classPrefix}}-title">交通指引</view>
+            <view style="padding:0 15px 0 25px;">
+                <view>1、深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站</view>
+                <view>2、深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站</view>
+                <view>3、深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站深茂高铁-阳江站</view>
+            </view>
+        </collapse-panel>
+    </view>
+
+    <view style="margin-top: 15rpx;">
+        <view>05.25</view>
+        <collapse-card wx:for="{{hotelList}}" wx:key="index" data="{{item}}" ></collapse-card>
+        <view>查看剩余5房型</view>
+    </view>
+
+    <view>
+        <view>入住须知</view>
+    </view>
+
+    <view class="{{classPrefix}}-footer">
+        <view>
+            <view>总价：</view>
+            <view>明细 <button type="primary" plain="true">立即预定</button></view>
+        </view>
+    </view>
 </view>
